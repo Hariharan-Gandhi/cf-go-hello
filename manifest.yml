@@ -1,0 +1,6 @@
+---
+applications:
+  - name: cf-go-hello
+    command: cf-go-hello 
+    env:
+      GOPACKAGENAME: cf-go-hello

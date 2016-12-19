@@ -3,11 +3,12 @@ package main
 import (
 	"net/http"
 	"io"
+	"os"
 )
 
 func main() {
 	http.HandleFunc("/", handler)
-	http.ListenAndServe(":8888", nil)
+	http.ListenAndServe(":"+os.Getenv("PORT"), nil)
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
